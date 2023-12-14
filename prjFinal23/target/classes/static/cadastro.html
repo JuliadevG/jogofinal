@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Pesquisa de Jogos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Cadastro de Jogo</h1>
+        <form id="cadastroForm" enctype="multipart/form-data">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" genero="genero" required><br>
+            
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" descricao="descricao" required><br>
+
+            <label for="thumbnailpath">Thumbnail:</label>
+            <input type="text" id="thumbnailpath" thumbnailpath="thumbnailpath" required><br>
+            
+            <label for="integrantes">Integrantes:</label>
+            <input type="text" id="integrantes" integrantes="integrantes" required><br>
+            
+            <label for="squad">Squad:</label>
+            <input type="text" id="squad" squad="squad" required><br>
+            
+            <label for="url">URL:</label>
+            <input type="text" id="url" url="url" required><br>
+         
+            <button type="button" onclick="cadastrarJogoEntity()">✔ Cadastrar</button>
+            <button type="button" onclick="excluirJogoEntity()">❌ Excluir</button>
+            <button type="button" onclick="atualizarJogoEntity()">🔁 Atualizar</button>
+            
+            <label class="label-file"> Escolha um arquivo
+				<input type="file" id="thumbnail" name="thumbnail" accept=".jpg, .jpeg, .png" required>      
+            </label> 
+				 </form>
+         <div id="divimagem">
+      <h2>Lista de Jogos</h2><br>
+      <button type="button" onclick="ListarJogos()">🔎 Pesquisar</button>
+      <header>
+
+      </header>
+
+      <aside>
+        <!-- Barra lateral, se necessário -->
+      </aside>
+
+      <main>
+        <table class="blueTable" id="jogos-tabela">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome do Jogo</th>
+              <th>Gênero do Jogo</th>
+              <th>Squad</th>
+              <th>Integrantes</th>
+              <th>URL</th>
+              <th>Imagem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- A tabela de funcionários será carregada aqui -->
+          </tbody>
+        </table>
+    </div>
+    </div> 
+    <script src="script.js"></script>
+</body>
